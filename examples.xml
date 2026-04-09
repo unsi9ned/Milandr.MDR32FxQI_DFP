@@ -65,8 +65,8 @@
 
         <condition id="ADC1_IT">
             <require condition="Cortex-M1 Series"/>
-            <require Cclass="CMSIS" Cgroup="CORE"/>
 			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
             <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
             <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>
@@ -76,8 +76,8 @@
 		
 		<condition id="ADC_DMA_ping_pong">
             <require condition="Cortex-M1 Series"/>
-            <require Cclass="CMSIS" Cgroup="CORE"/>
 			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
             <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
@@ -85,8 +85,8 @@
 		
         <condition id="AnalogWatchdog">
             <require condition="Cortex-M1 Series"/>
-            <require Cclass="CMSIS" Cgroup="CORE"/>
 			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
             <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
             <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
@@ -95,8 +95,8 @@
 
         <condition id="ARINC">
             <require condition="Cortex-M1 Series"/>
-            <require Cclass="CMSIS" Cgroup="CORE"/>
 			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
             <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
             <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
@@ -107,6 +107,296 @@
 			<deny Cclass="Drivers" Cgroup="ARINC429T" Cversion="2.1.0i"/>
         </condition>		
 		
+        <condition id="BKP_RTC">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+        </condition>			
+		
+        <condition id="BKP_SLEEP">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="CAN_LoopBack_Interrupt">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="CAN_LoopBack_Polling">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+        </condition>		
+		
+        <condition id="CAN_LoopBack_RTR">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="DAC_SineWave">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="DAC" Cversion="2.2.0i"/>						
+        </condition>
+		
+        <condition id="DMA_Pri_Alt_Channels">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="DMA_SPI_RAM">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>			
+        </condition>		
+		
+        <condition id="DMA_TIMER_RAM">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+        </condition>		
+		
+        <condition id="DMA_UART_RAM">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="EBC_Extern_NAND">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="EBC_Extern_RAM">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
+        </condition>		
+		
+        <condition id="EEPROM_Code_in_RAM">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+        </condition>		
+		
+        <condition id="EEPROM_MassErase">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="EEPROM_Sector_Operations">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="Ethernet_ICMP_TELNET">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>									
+			<deny Cclass="Drivers" Cgroup="Ethernet" Cversion="2.2.0i"/>									
+        </condition>		
+		
+        <condition id="IWDG_Independent">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="IWDG" Cversion="2.0.3i"/>									
+        </condition>		
+		
+        <condition id="MIL_STD_1553_Bus_Controller">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="MIL_STD_1553" Cversion="2.1.0i"/>						
+			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>		
+        </condition>		
+		
+        <condition id="MIL_STD_1553_Terminal_Device">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="MIL_STD_1553" Cversion="2.1.0i"/>						
+			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
+        </condition>			
+		
+        <condition id="PORT_Joystick_LEDs">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="RST_CLK_CPU_Clock">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>					
+        </condition>	
+
+        <condition id="SSP_SPI_FullDuplex">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>				
+        </condition>		
+		
+        <condition id="TIMER_5PWM_Output">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
+        </condition>	
+
+        <condition id="UART_ArraySend">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+        </condition>	
+
+        <condition id="UART_Interrupt">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+        </condition>
+
+        <condition id="UART_RetargetSTDIO">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
+        </condition>	
+
+        <condition id="UART_WordSend">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+        </condition>		
+		
+        <condition id="USB_VCOM_Echo">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="USB" Cversion="2.1.0i"/>		
+			<deny Cclass="Drivers" Cgroup="USB Library" Cversion="2.1.0i"/>		
+        </condition>	
+
+        <condition id="WWDG_Use_GetStatus">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
+        </condition>		
+		
+        <condition id="WWDG_Use_Interrupt">
+            <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
+        </condition>		
+
 	</conditions>
 	
 	<components>
@@ -142,6 +432,270 @@
                 <file category="source" name="Examples\MDR32F1QI\ARINC\main.c"/>
             </files>
         </component>		
+		
+        <!-- MDR32F1QI BKP RTC -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="BKP" Cvariant="RTC" Cversion="2.0.2" condition="BKP_RTC">
+            <description>This example shows how to use BKP module functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\BKP\RTC\main.c"/>
+            </files>
+        </component>				
+		
+        <!-- MDR32F1QI BKP SLEEP -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="BKP" Cvariant="SLEEP" Cversion="2.0.2" condition="BKP_SLEEP">
+            <description>This example shows how to use MCU SLEEP mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\BKP\SLEEP\main.c"/>
+            </files>
+        </component>
+		
+        <!-- MDR32F1QI CAN LoopBack_Interrupt -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="CAN" Cvariant="LoopBack_Interrupt" Cversion="2.0.3" condition="CAN_LoopBack_Interrupt">
+            <description>This example provides a description of how to set a communication with the CAN in loopback mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\CAN\LoopBack_Interrupt\main.c"/>
+            </files>
+        </component>		
+		
+        <!-- MDR32F1QI CAN LoopBack_Interrupt -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="CAN" Cvariant="LoopBack_Polling" Cversion="2.0.3" condition="CAN_LoopBack_Polling">
+            <description>This example provides a description of how to set a communication with the CAN in loopback mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\CAN\LoopBack_Polling\main.c"/>
+            </files>
+        </component>				
+		
+        <!-- MDR32F1QI CAN LoopBack_RTR -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="CAN" Cvariant="LoopBack_RTR" Cversion="2.0.3" condition="CAN_LoopBack_RTR">
+            <description>This example provides a description of how to set a communication with the CAN in loopback mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\CAN\LoopBack_RTR\main.c"/>
+            </files>
+        </component>		
+
+        <!-- MDR32F1QI DAC DMA_SineWave -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DAC" Cvariant="DMA_SineWave" Cversion="2.0.1" condition="DAC_SineWave">
+            <description>This example describes how to use DAC with DMA to generate sine waves on DAC channel output</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\DAC\DMA_SineWave\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI DMA Pri_Alt_Channels -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="Pri_Alt_Channels" Cversion="2.0.0" condition="DMA_Pri_Alt_Channels">
+            <description>This example shows how to use DMA</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\DMA\Pri_Alt_Channels\main.c"/>
+            </files>
+        </component>
+		
+		<!-- MDR32F1QI DMA SPI_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="SPI_RAM" Cversion="2.0.1" condition="DMA_SPI_RAM">
+            <description>This example provides a description of how to use four DMA channels to transfer a data buffer from memory to SPI_SLAVE(SSP2) through SPI_MASTER(SSP1) and a second data buffer from memory to SPI_MASTER through SPI_SLAVE in full-duplex mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\DMA\SPI_RAM\main.c"/>
+            </files>
+        </component>		
+		
+		<!-- MDR32F1QI DMA TIMER_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="TIMER_RAM" Cversion="2.0.0" condition="DMA_TIMER_RAM">
+            <description>This example provides a description of how to use DMA with TIM1 Capture request to transfer Data from TIM1 Capture Compare Register2 to memory</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\DMA\TIMER_RAM\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI DMA UART_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="UART_RAM" Cversion="2.0.1" condition="DMA_UART_RAM">
+            <description>This example provides a basic communication between UART1 and UART2 using DMA capability</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\DMA\UART_RAM\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI EBC Extern_NAND -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EBC" Cvariant="Extern_NAND" Cversion="2.0.2" condition="EBC_Extern_NAND">
+            <description>This example shows how to use EXT_BUS module functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\EBC\Extern_NAND\main.c"/>
+            </files>
+        </component>		
+		
+		<!-- MDR32F1QI EBC Extern_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EBC" Cvariant="Extern_RAM" Cversion="2.0.2" condition="EBC_Extern_RAM">
+            <description>This example shows how to use EXT_BUS module functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\EBC\Extern_RAM\main.c"/>
+            </files>
+        </component>		
+		
+		<!-- MDR32F1QI EEPROM Code_in_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EEPROM" Cvariant="Code_in_RAM" Cversion="2.0.2" condition="EEPROM_Code_in_RAM">
+            <description>This example shows how to use EEPROM</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\EEPROM\Code_in_RAM\main.c"/>
+            </files>
+        </component>			
+		
+		<!-- MDR32F1QI EEPROM MassErase -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EEPROM" Cvariant="MassErase" Cversion="2.0.1" condition="EEPROM_MassErase">
+            <description>This example shows how to use EEPROM</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\EEPROM\MassErase\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI EEPROM Sector_Operations -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EEPROM" Cvariant="Sector_Operations" Cversion="2.0.2" condition="EEPROM_Sector_Operations">
+            <description>This example shows how to use EEPROM</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\EEPROM\Sector_Operations\main.c"/>
+            </files>
+        </component>
+
+		<!-- MDR32F1QI Ethernet Sector_Operations -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="Ethernet" Cvariant="ICMP_TELNET" Cversion="2.1.1" condition="Ethernet_ICMP_TELNET">
+            <description>This example shows how to use Ethernet for ICMP and TELNET</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\Ethernet\src\Main.c"/>
+				<file category="source" name="Examples\MDR32F1QI\Ethernet\src\hash.c"/>
+				<file category="source" name="Examples\MDR32F1QI\Ethernet\src\tcpip.c"/>
+				<file category="header" name="Examples\MDR32F1QI\Ethernet\inc\hash.h"/>
+				<file category="header" name="Examples\MDR32F1QI\Ethernet\inc\tcpip.h"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI IWDG Sector_Operations -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="IWDG" Cvariant="Independent" Cversion="2.0.1" condition="IWDG_Independent">
+            <description>This example shows how to use IWDG module functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\IWDG\Independent\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI MIL_STD_1553 Sector_Operations -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="MIL_STD_1553" Cvariant="Bus_Controller" Cversion="2.0.2" condition="MIL_STD_1553_Bus_Controller">
+            <description>This example provides a description of how to use MIL STD 1553 in Bus Controller mode</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\MIL_STD_1553\Bus Controller\src\Main.c"/>
+				<file category="source" name="Examples\MDR32F1QI\MIL_STD_1553\Bus Controller\src\MDR32F1QI_IT.c"/>
+				<file category="source" name="Examples\MDR32F1QI\MIL_STD_1553\Bus Controller\src\MIL_STD1553_IT_Handler.c"/>
+				<file category="header" name="Examples\MDR32F1QI\MIL_STD_1553\Bus Controller\inc\MDR32F1QI_IT.h"/>
+				<file category="header" name="Examples\MDR32F1QI\MIL_STD_1553\Bus Controller\inc\MIL_STD_1553_BusController.h"/>
+				<file category="header" name="Examples\MDR32F1QI\MIL_STD_1553\Bus Controller\inc\MIL_STD_1553_IT_Handler.h"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI MIL_STD_1553 Terminal_Device -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="MIL_STD_1553" Cvariant="Terminal_Device" Cversion="2.0.2" condition="MIL_STD_1553_Terminal_Device">
+            <description>This example provides a description of how to use MIL STD 1553 in Terminal Device mode</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\MIL_STD_1553\Terminal Device\src\Main.c"/>
+				<file category="source" name="Examples\MDR32F1QI\MIL_STD_1553\Terminal Device\src\MDR32F1QI_IT.c"/>
+				<file category="source" name="Examples\MDR32F1QI\MIL_STD_1553\Terminal Device\src\MIL_STD1553_IT_Handler.c"/>
+				<file category="source" name="Examples\MDR32F1QI\MIL_STD_1553\Terminal Device\src\TIMER_IT_handler.c"/>
+				<file category="header" name="Examples\MDR32F1QI\MIL_STD_1553\Terminal Device\inc\MDR32F1QI_IT.h"/>
+				<file category="header" name="Examples\MDR32F1QI\MIL_STD_1553\Terminal Device\inc\MIL_STD_1553_IT_Handler.h"/>
+				<file category="header" name="Examples\MDR32F1QI\MIL_STD_1553\Terminal Device\inc\TIMER_IT_handler.h"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI MIL_STD_1553 Terminal Device_REV6 -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="MIL_STD_1553" Cvariant="Terminal_Device_REV6" Cversion="2.0.1" condition="MIL_STD_1553_Terminal_Device">
+            <description>This example is intended to show the functionality of microcontroller MDR32F1QI in TERMINAL mode of the standart GOST R 52070-2003</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\MIL_STD_1553\Terminal Device_REV6\main.c"/>
+            </files>
+        </component>
+
+		<!-- MDR32F1QI PORT Joystick_LEDs -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="PORT" Cvariant="Joystick_LEDs" Cversion="2.0.2" condition="PORT_Joystick_LEDs">
+            <description>This example shows how to use input/output ports</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\PORT\Joystick_LEDs\main.c"/>
+            </files>
+        </component>		
+		
+		<!-- MDR32F1QI RST_CLK CPU_Clock -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="RST_CLK" Cvariant="CPU_Clock" Cversion="2.0.3" condition="RST_CLK_CPU_Clock">
+            <description>This example shows how to use RST_CLK module functions to choose particular CPU_CLK frequency</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\RST_CLK\CPU_Clock\main.c"/>
+            </files>
+        </component>		
+
+		<!-- MDR32F1QI SSP FullDuplex -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="SSP" Cvariant="SPI_FullDuplex" Cversion="2.0.2" condition="SSP_SPI_FullDuplex">
+            <description>This example provides a description of how to set a communication between SPI1 and SPI2 in full-duplex mode and performs a transfer from Master to Slave</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\SSP\SPI_FullDuplex\main.c"/>
+            </files>
+        </component>		
+		
+		<!-- MDR32F1QI TIMER 5PWM_Output -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="TIMER" Cvariant="5PWM_Output" Cversion="2.0.0" condition="TIMER_5PWM_Output">
+            <description>This example shows how to configure the TIM4 peripheral to generate 5 PWM signals with 3 different duty cycles</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\TIMER\5PWM_Output\main.c"/>
+            </files>
+        </component>		
+		
+		<!-- MDR32F1QI UART ArraySend -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="ArraySend" Cversion="2.0.1" condition="UART_ArraySend">
+            <description>This example shows how to use UART</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\UART\ArraySend\main.c"/>
+            </files>
+        </component>	
+		
+		<!-- MDR32F1QI UART Interrupt -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="Interrupt" Cversion="2.0.2" condition="UART_Interrupt">
+            <description>This example shows how to use UART</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\UART\Interrupt\main.c"/>
+            </files>
+        </component>		
+
+		<!-- MDR32F1QI UART RetargetSTDIO -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="RetargetSTDIO" Cversion="2.0.2" condition="UART_RetargetSTDIO">
+            <description>This example shows how to redirect standard I/O (STDIO) to UART using the MDR32FxQI_utils module</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\UART\RetargetSTDIO\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI UART WordSend -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="WordSend" Cversion="2.0.1" condition="UART_WordSend">
+            <description>This example shows how to use UART</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\UART\WordSend\main.c"/>
+            </files>
+        </component>		
+		
+		<!-- MDR32F1QI USB VCOM_Echo -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="USB" Cvariant="VCOM_Echo" Cversion="2.0.1" condition="USB_VCOM_Echo">
+            <description>This example shows how to use USB CDC (Communication Device Class) device as Virtual COM port implementing "echo" mode</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\USB\VCOM_Echo\src\main.c"/>
+				<file category="header" name="Examples\MDR32F1QI\USB\VCOM_Echo\inc\MDR32FxQI_usb_handlers.h"/>
+            </files>
+        </component>		
+		
+		<!-- MDR32F1QI WWDG Use_GetStatus -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="WWDG" Cvariant="Use_GetStatus" Cversion="2.0.1" condition="WWDG_Use_GetStatus">
+            <description>This example shows how to use WWDG module functions</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\WWDG\Use_GetStatus\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F1QI WWDG Use_Interrupt -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="WWDG" Cvariant="Use_Interrupt" Cversion="2.0.1" condition="WWDG_Use_Interrupt">
+            <description>This example shows how to use WWDG module functions</description>
+            <files>
+				<file category="source" name="Examples\MDR32F1QI\WWDG\Use_Interrupt\main.c"/>
+            </files>
+        </component>			
 		
 	</components>
 </package>	
