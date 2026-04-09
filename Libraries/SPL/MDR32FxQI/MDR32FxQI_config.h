@@ -48,7 +48,9 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include <stdint.h>
+#if defined (__ARMCC_VERSION)
 #include <RTE_Components.h> // Keil uVision specific inclusion
+#endif
 
 /* MDR32FxQI SPL version numbers - major, minor, patch */
 #define _MDR32FxQI_SPL_VERSION_MAJOR (1U) /*!< [23:16] major version */

@@ -28,6 +28,9 @@
 #elif defined (__ICCARM__) /* IAR Compiler */
     extern uint32_t __vector_table;
     #define __VECTOR_TABLE_ADDRESS &__vector_table
+#elif defined (__GNUC__) /* GNU Compiler (GCC) */
+    extern uint32_t __Vectors;
+    #define __VECTOR_TABLE_ADDRESS &__Vectors
 #endif
 
 /** @} */ /* End of group __MDR32FG16S1QI_System_Private_Defines */

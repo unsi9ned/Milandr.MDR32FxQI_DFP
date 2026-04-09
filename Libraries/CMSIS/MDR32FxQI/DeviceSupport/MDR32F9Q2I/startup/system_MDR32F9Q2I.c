@@ -31,6 +31,9 @@
 #elif defined (__CMCARM__) /* Phyton CMC-ARM Compiler */
     extern uint32_t __Vectors;
     #define __VECTOR_TABLE_ADDRESS &__Vectors
+#elif defined (__GNUC__) /* GNU Compiler (GCC) */
+    extern uint32_t __Vectors;
+    #define __VECTOR_TABLE_ADDRESS &__Vectors
 #endif
 
 /** @} */ /* End of group __MDR32F9Q2I_System_Private_Defines */

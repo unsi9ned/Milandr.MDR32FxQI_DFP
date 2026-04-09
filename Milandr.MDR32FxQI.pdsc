@@ -434,6 +434,13 @@ Debug mode:
 
 
     <conditions>
+        <!-- Compiler Conditions -->
+        <condition id="Compiler ARMCC">
+            <require Tcompiler="ARMCC"/>
+        </condition>
+        <condition id="GCC Compiler">
+            <require Tcompiler="GCC"/>
+        </condition>
         <!-- Device Conditions -->
         <condition id="CON_MDR32F1QI">
             <description>MDR32F1QI device</description>
@@ -544,7 +551,8 @@ Debug mode:
             </RTE_Components_h>
             <files>
                 <!-- startup files -->
-                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\startup\arm\startup_MDR32F9Q2I.S" attr="config"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\startup\arm\startup_MDR32F9Q2I.S" attr="config" condition="Compiler ARMCC"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\startup\gcc\startup_MDR32F9Q2I.S" attr="config" condition="GCC Compiler"/>				
                 <!-- system file -->
                 <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\startup\system_MDR32F9Q2I.c" attr="config"/>
                 <!-- header file -->
@@ -552,11 +560,11 @@ Debug mode:
                 <!-- header file -->
                 <file category="header" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\inc\MDR32F9Q2I.h"/>
                 <!-- header file -->
-                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM3\core_cm3.h"/>
+                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM3\core_cm3.h" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\MDR32FxQI_config.h" attr="config"/>
                 <!-- linker file -->
-                <file category="linkerScript" name="IDE\scatter\MDR32F9Q2I.sct" attr="config"/>
+                <file category="linkerScript" name="IDE\scatter\MDR32F9Q2I.sct" attr="config" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\IRQ_Handler_Template\MDR32F9Q2I_IT.h" attr="template" select="IT Handlers Template"/>
                 <!-- source file -->
@@ -573,7 +581,8 @@ Debug mode:
             </RTE_Components_h>
             <files>
                 <!-- startup files -->
-                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\arm\startup_K1986VE9xI.S" attr="config"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\arm\startup_K1986VE9xI.S" attr="config" condition="Compiler ARMCC"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\gcc\startup_K1986VE9xI.S" attr="config" condition="GCC Compiler"/>
                 <!-- system file -->
                 <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\system_K1986VE9xI.c" attr="config"/>
                 <!-- header file -->
@@ -581,11 +590,11 @@ Debug mode:
                 <!-- header file -->
                 <file category="header" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\inc\K1986VE9xI.h"/>
                 <!-- header file -->
-                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM3\core_cm3.h"/>
+                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM3\core_cm3.h" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\MDR32FxQI_config.h" attr="config"/>
                 <!-- linker file -->
-                <file category="linkerScript" name="IDE\scatter\K1986VE9xI.sct" attr="config"/>
+                <file category="linkerScript" name="IDE\scatter\K1986VE9xI.sct" attr="config" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\IRQ_Handler_Template\K1986VE9xI_IT.h" attr="template" select="IT Handlers Template"/>
                 <!-- source file -->
@@ -602,7 +611,8 @@ Debug mode:
             </RTE_Components_h>
             <files>
                 <!-- startup files -->
-                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\arm\startup_K1986VE9xI.S" attr="config"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\arm\startup_K1986VE9xI.S" attr="config" condition="Compiler ARMCC"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\gcc\startup_K1986VE9xI.S" attr="config" condition="GCC Compiler"/>				
                 <!-- system file -->
                 <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\system_K1986VE9xI.c" attr="config"/>
                 <!-- header file -->
@@ -610,11 +620,11 @@ Debug mode:
                 <!-- header file -->
                 <file category="header" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\inc\K1986VE9xI.h"/>
                 <!-- header file -->
-                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM3\core_cm3.h"/>
+                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM3\core_cm3.h" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\MDR32FxQI_config.h" attr="config"/>
                 <!-- linker file -->
-                <file category="linkerScript" name="IDE\scatter\K1986VE9xI.sct" attr="config"/>
+                <file category="linkerScript" name="IDE\scatter\K1986VE9xI.sct" attr="config" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\IRQ_Handler_Template\K1986VE9xI_IT.h" attr="template" select="IT Handlers Template"/>
                 <!-- source file -->
@@ -632,7 +642,8 @@ Debug mode:
             </RTE_Components_h>
             <files>
                 <!-- startup files -->
-                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\startup\arm\startup_MDR32F1QI.S" attr="config"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\startup\arm\startup_MDR32F1QI.S" attr="config" condition="Compiler ARMCC"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\startup\gcc\startup_MDR32F1QI.S" attr="config" condition="GCC Compiler"/>								
                 <!-- system file -->
                 <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\startup\system_MDR32F1QI.c" attr="config"/>
                 <!-- header file -->
@@ -640,11 +651,11 @@ Debug mode:
                 <!-- header file -->
                 <file category="header" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\inc\MDR32F1QI.h"/>
                 <!-- header file -->
-                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM1\core_cm1.h"/>
+                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM1\core_cm1.h" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\MDR32FxQI_config.h" attr="config"/>
                 <!-- linker file -->
-                <file category="linkerScript" name="IDE\scatter\MDR32F1QI.sct" attr="config"/>
+                <file category="linkerScript" name="IDE\scatter\MDR32F1QI.sct" attr="config" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\IRQ_Handler_Template\MDR32F1QI_IT.h" attr="template" select="IT Handlers Template"/>
                 <!-- source file -->
@@ -661,7 +672,8 @@ Debug mode:
             </RTE_Components_h>
             <files>
                 <!-- startup files -->
-                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\startup\arm\startup_MDR32F1QI.S" attr="config"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\startup\arm\startup_MDR32F1QI.S" attr="config" condition="Compiler ARMCC"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\startup\gcc\startup_MDR32F1QI.S" attr="config" condition="GCC Compiler"/>				
                 <!-- system file -->
                 <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\startup\system_MDR32F1QI.c" attr="config"/>
                 <!-- header file -->
@@ -669,11 +681,11 @@ Debug mode:
                 <!-- header file -->
                 <file category="header" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F1QI\inc\MDR32F1QI.h"/>
                 <!-- header file -->
-                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM1\core_cm1.h"/>
+                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM1\core_cm1.h" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\MDR32FxQI_config.h" attr="config"/>
                 <!-- linker file -->
-                <file category="linkerScript" name="IDE\scatter\MDR32F1QI.sct" attr="config"/>
+                <file category="linkerScript" name="IDE\scatter\MDR32F1QI.sct" attr="config" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\IRQ_Handler_Template\MDR32F1QI_IT.h" attr="template" select="IT Handlers Template"/>
                 <!-- source file -->
@@ -690,7 +702,8 @@ Debug mode:
             </RTE_Components_h>
             <files>
                 <!-- startup files -->
-                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE1xI\startup\arm\startup_K1986VE1xI.S" attr="config"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE1xI\startup\arm\startup_K1986VE1xI.S" attr="config" condition="Compiler ARMCC"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE1xI\startup\gcc\startup_K1986VE1xI.S" attr="config" condition="GCC Compiler"/>				
                 <!-- system file -->
                 <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE1xI\startup\system_K1986VE1xI.c" attr="config"/>
                 <!-- header file -->
@@ -698,11 +711,11 @@ Debug mode:
                 <!-- header file -->
                 <file category="header" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE1xI\inc\K1986VE1xI.h"/>
                 <!-- header file -->
-                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM1\core_cm1.h"/>
+                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM1\core_cm1.h" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\MDR32FxQI_config.h" attr="config"/>
                 <!-- linker file -->
-                <file category="linkerScript" name="IDE\scatter\K1986VE1xI.sct" attr="config"/>
+                <file category="linkerScript" name="IDE\scatter\K1986VE1xI.sct" attr="config" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\IRQ_Handler_Template\K1986VE1xI_IT.h" attr="template" select="IT Handlers Template"/>
                 <!-- source file -->
@@ -720,7 +733,8 @@ Debug mode:
             </RTE_Components_h>
             <files>
                 <!-- startup files -->
-                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32FG16S1QI\startup\arm\startup_MDR32FG16S1QI.S" attr="config"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32FG16S1QI\startup\arm\startup_MDR32FG16S1QI.S" attr="config" condition="Compiler ARMCC"/>
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32FG16S1QI\startup\gcc\startup_MDR32FG16S1QI.S" attr="config" condition="GCC Compiler"/>				
                 <!-- system file -->
                 <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32FG16S1QI\startup\system_MDR32FG16S1QI.c" attr="config"/>
                 <!-- header file -->
@@ -728,11 +742,11 @@ Debug mode:
                 <!-- header file -->
                 <file category="header" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32FG16S1QI\inc\MDR32FG16S1QI.h"/>
                 <!-- header file -->
-                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM3\core_cm3.h"/>
+                <file category="header" name="Libraries\CMSIS\MDR32FxQI\CoreSupport\CM3\core_cm3.h" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\MDR32FxQI_config.h" attr="config"/>
                 <!-- linker file -->
-                <file category="linkerScript" name="IDE\scatter\MDR32FG16S1QI.sct" attr="config"/>
+                <file category="linkerScript" name="IDE\scatter\MDR32FG16S1QI.sct" attr="config" condition="Compiler ARMCC"/>
                 <!-- header file -->
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\IRQ_Handler_Template\MDR32FG16S1QI_IT.h" attr="template" select="IT Handlers Template"/>
                 <!-- source file -->

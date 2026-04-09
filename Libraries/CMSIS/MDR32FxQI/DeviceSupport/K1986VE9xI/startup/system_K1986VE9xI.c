@@ -31,6 +31,9 @@
 #elif defined (__CMCARM__) /* Phyton CMC-ARM Compiler */
     extern uint32_t __Vectors;
     #define __VECTOR_TABLE_ADDRESS &__Vectors
+#elif defined (__GNUC__) /* GNU Compiler (GCC) */
+    extern uint32_t __Vectors;
+    #define __VECTOR_TABLE_ADDRESS &__Vectors	
 #endif
 
 #if defined(FACTORY_DATA_SYSTEM_INIT) && (FACTORY_DATA_SYSTEM_INIT == 1)
