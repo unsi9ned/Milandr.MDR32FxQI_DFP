@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package schemaVersion="1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+    <vendor>Milandr</vendor>
+    <url></url>
+    <name>MDR32FxQI Examples</name>
+    <description>Milandr MDR32FxQI Examples</description>
+    <license>License.txt</license>
+
+
+    <releases>
+        <release version="1.3.2" date="2025-03-28">Fix pdsc name to follow Pack Installer rules in Keil uVision 5.39.0.0.</release>
+        <release version="1.3.1" date="2025-03-27">Fix pack name to follow Pack Installer rules in Keil uVision 5.39.0.0.</release>
+        <release version="1.3.0" date="2024-12-21">Add new MCU support. SPL MDR32FxQI libraries have been updated to version 1.3.0.</release>
+        <release version="1.2.0" date="2024-02-02">Added initial MDR1986VE94GI support. SPL MDR32FxQI libraries have been updated to version 1.2.0.</release>
+        <release version="1.1.0" date="2023-07-07">The addition of the CMSIS_device_header preprocessor directive with the name of the CMSIS header file of the selected microcontroller in the RTE_Components.h file is enabled. FLM files updated. The SPL MDR32FxQI libraries have been updated to version 1.1.0.</release>
+        <release version="1.0.0" date="2022-04-05">Initial version</release>
+    </releases>
+
+
+    <keywords>
+        <!-- keywords for indexing -->
+        <keyword>Milandr</keyword>
+        <keyword>MDR</keyword>
+        <keyword>MDR32FxQI</keyword>
+        <keyword>MDR32F1QI</keyword>
+        <keyword>K1986VE1FI</keyword>
+        <keyword>K1986VE1GI</keyword>
+        <keyword>MDR32F9Q2I</keyword>
+        <keyword>K1986VE92FI</keyword>
+        <keyword>K1986VE92F1I</keyword>
+        <keyword>MDR1986VE94GI</keyword>
+        <keyword>MDR1209GI</keyword>
+        <keyword>MDR32FG16S1QI</keyword>
+    </keywords>
+	
+	
+    <taxonomy>
+        <description Cclass="Device">Startup, System Setup</description>
+        <description Cclass="Drivers">Examples for work with microcontroller peripherals</description>
+    </taxonomy>
+	
+	
+    <conditions>
+        <condition id="GCC Compiler">
+            <require Tcompiler="GCC"/>
+        </condition>	
+		
+		<condition id="Cortex-M1 Series">
+            <description>Milandr Device from Cortex-M1 Series</description>
+            <accept Dvendor="Milandr:99" Dname="MDR32F1QI"/>
+            <accept Dvendor="Milandr:99" Dname="K1986VE1xI"/>
+        </condition>
+		
+		<condition id="Cortex-M3 Series">
+            <description>Milandr Device from Cortex-M3 Series</description>
+            <accept Dvendor="Milandr:99" Dname="MDR32F9Q2I"/>
+            <accept Dvendor="Milandr:99" Dname="K1986VE92xI"/>
+			<accept Dvendor="Milandr:99" Dname="K1986VE94GI"/>
+        </condition>		
+		
+		<condition id="Cortex-M3 DSP Series">
+            <description>Milandr Device from Cortex-M3 DSP Series</description>
+            <accept Dvendor="Milandr:99" Dname="MDR32FG16S1QI"/>
+        </condition>	
+
+        <condition id="ADC1_IT">
+            <require condition="Cortex-M1 Series"/>
+            <require Cclass="CMSIS" Cgroup="CORE"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
+        </condition>
+		
+		<condition id="ADC_DMA_ping_pong">
+            <require condition="Cortex-M1 Series"/>
+            <require Cclass="CMSIS" Cgroup="CORE"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+        </condition>
+		
+        <condition id="AnalogWatchdog">
+            <require condition="Cortex-M1 Series"/>
+            <require Cclass="CMSIS" Cgroup="CORE"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
+        </condition>	
+
+        <condition id="ARINC">
+            <require condition="Cortex-M1 Series"/>
+            <require Cclass="CMSIS" Cgroup="CORE"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+			<deny Cclass="Drivers" Cgroup="ARINC429R" Cversion="2.1.0i"/>
+			<deny Cclass="Drivers" Cgroup="ARINC429T" Cversion="2.1.0i"/>
+        </condition>		
+		
+	</conditions>
+	
+	<components>
+	
+        <!-- MDR32F1QI ADC1_IT -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="ADC" Cversion="2.0.2" Cvariant="IT" condition="ADC1_IT">
+            <description>This example describes how to use the ADC1 to transfer continuously converted data from ADC1 to memory</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\ADC\ADC1_IT\main.c"/>
+            </files>
+        </component>
+		
+        <!-- MDR32F1QI ADC_DMA_ping_pong -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="ADC" Cversion="2.0.0" Cvariant="DMA_ping_pong" condition="ADC_DMA_ping_pong">
+            <description>This example shows how to use DMA in ping-pong mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\ADC\ADC_DMA_ping_pong\main.c"/>
+            </files>
+        </component>	
+		
+        <!-- MDR32F1QI AnalogWatchdog -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="ADC" Cversion="2.0.2" Cvariant="AnalogWatchdog" condition="AnalogWatchdog">
+            <description>This example describes how to use the ADC analog watchdog to guard continuously an ADC channel</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\ADC\AnalogWatchdog\main.c"/>
+            </files>
+        </component>
+
+        <!-- MDR32F1QI ARINC -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="ARINC" Cversion="2.0.3" condition="ARINC">
+            <description>This example provides a description of how to set a communication with the ARINC</description>
+            <files>
+                <file category="source" name="Examples\MDR32F1QI\ARINC\main.c"/>
+            </files>
+        </component>		
+		
+	</components>
+</package>	
