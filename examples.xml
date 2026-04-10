@@ -74,6 +74,15 @@
 			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
         </condition>
 		
+        <condition id="ADC1_DMA_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+        </condition>		
+		
 		<condition id="ADC_DMA_ping_pong">
             <require condition="Cortex-M1 Series"/>
 			<!-- Все deny заменить на require после отладки -->
@@ -82,6 +91,15 @@
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
         </condition>
+		
+		<condition id="ADC_DMA_ping_pong_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+        </condition>		
 		
         <condition id="AnalogWatchdog">
             <require condition="Cortex-M1 Series"/>
@@ -92,6 +110,15 @@
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
         </condition>	
+		
+        <condition id="AnalogWatchdog_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+        </condition>		
 
         <condition id="ARINC">
             <require condition="Cortex-M1 Series"/>
@@ -114,6 +141,15 @@
             <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+        </condition>	
+
+        <condition id="BKP_RTC_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
         </condition>			
 		
         <condition id="BKP_SLEEP">
@@ -126,6 +162,15 @@
 			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
 			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
         </condition>	
+		
+        <condition id="BKP_STOP_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+        </condition>		
 
         <condition id="CAN_LoopBack_Interrupt">
             <require condition="Cortex-M1 Series"/>
@@ -135,6 +180,15 @@
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
         </condition>	
+		
+        <condition id="CAN_LoopBack_Interrupt_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+        </condition>			
 
         <condition id="CAN_LoopBack_Polling">
             <require condition="Cortex-M1 Series"/>
@@ -145,6 +199,15 @@
 			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
         </condition>		
 		
+        <condition id="CAN_LoopBack_Polling_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+        </condition>			
+		
         <condition id="CAN_LoopBack_RTR">
             <require condition="Cortex-M1 Series"/>
 			<!-- Все deny заменить на require после отладки -->
@@ -153,6 +216,24 @@
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
         </condition>	
+		
+        <condition id="CAN_LoopBack_RTR_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="COMP_Internal_Scale_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="COMP" Cversion="2.2.0i"/>						
+        </condition>		
 
         <condition id="DAC_SineWave">
             <require condition="Cortex-M1 Series"/>
@@ -165,6 +246,17 @@
 			<deny Cclass="Drivers" Cgroup="DAC" Cversion="2.2.0i"/>						
         </condition>
 		
+        <condition id="DAC_SineWave_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="DAC" Cversion="2.2.0i"/>						
+        </condition>		
+		
         <condition id="DMA_Pri_Alt_Channels">
             <require condition="Cortex-M1 Series"/>
 			<!-- Все deny заменить на require после отладки -->
@@ -172,6 +264,14 @@
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
         </condition>	
+		
+        <condition id="DMA_Pri_Alt_Channels_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+        </condition>		
 
         <condition id="DMA_SPI_RAM">
             <require condition="Cortex-M1 Series"/>
@@ -183,8 +283,28 @@
 			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>			
         </condition>		
 		
+        <condition id="DMA_SPI_RAM_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>			
+        </condition>		
+		
         <condition id="DMA_TIMER_RAM">
             <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="DMA_TIMER_RAM_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
 			<!-- Все deny заменить на require после отладки -->
             <deny Cclass="Device" Cgroup="Startup"/>
 			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
@@ -202,6 +322,16 @@
 			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
         </condition>	
+		
+        <condition id="DMA_UART_RAM_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+        </condition>		
 
         <condition id="EBC_Extern_NAND">
             <require condition="Cortex-M1 Series"/>
@@ -210,9 +340,25 @@
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
         </condition>	
+		
+        <condition id="EBC_Extern_NAND_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
+        </condition>			
 
         <condition id="EBC_Extern_RAM">
             <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
+        </condition>
+
+        <condition id="EBC_Extern_RAM_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
 			<!-- Все deny заменить на require после отладки -->
             <deny Cclass="Device" Cgroup="Startup"/>
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
@@ -409,6 +555,14 @@
             </files>
         </component>
 		
+		<!-- MDR32F9Q2I ADC1_IT -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="ADC" Cversion="2.0.1" Cvariant="DMA" condition="ADC1_DMA_K1986VE9xx">
+            <description>This example describes how to use the ADC1 and DMA to transfer continuously converted data from ADC1 to memory</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\ADC\ADC1_DMA\main.c"/>
+            </files>
+        </component>
+		
         <!-- MDR32F1QI ADC_DMA_ping_pong -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="ADC" Cversion="2.0.0" Cvariant="DMA_ping_pong" condition="ADC_DMA_ping_pong">
             <description>This example shows how to use DMA in ping-pong mode</description>
@@ -417,6 +571,14 @@
             </files>
         </component>	
 		
+        <!-- MDR32F9Q2I ADC_DMA_ping_pong -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="ADC" Cversion="2.0.0" Cvariant="DMA_ping_pong" condition="ADC_DMA_ping_pong_K1986VE9xx">
+            <description>This example shows how to use DMA in ping-pong mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\ADC\ADC_DMA_ping_pong\main.c"/>
+            </files>
+        </component>		
+		
         <!-- MDR32F1QI AnalogWatchdog -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="ADC" Cversion="2.0.2" Cvariant="AnalogWatchdog" condition="AnalogWatchdog">
             <description>This example describes how to use the ADC analog watchdog to guard continuously an ADC channel</description>
@@ -424,6 +586,14 @@
                 <file category="source" name="Examples\MDR32F1QI\ADC\AnalogWatchdog\main.c"/>
             </files>
         </component>
+		
+        <!-- MDR32F9Q2I AnalogWatchdog -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="ADC" Cversion="2.0.1" Cvariant="AnalogWatchdog" condition="AnalogWatchdog_K1986VE9xx">
+            <description>This example describes how to use the ADC analog watchdog to guard continuously an ADC channel</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\ADC\AnalogWatchdog\main.c"/>
+            </files>
+        </component>		
 
         <!-- MDR32F1QI ARINC -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="ARINC" Cversion="2.0.3" condition="ARINC">
@@ -439,7 +609,15 @@
             <files>
                 <file category="source" name="Examples\MDR32F1QI\BKP\RTC\main.c"/>
             </files>
-        </component>				
+        </component>	
+
+        <!-- MDR32F9Q2I BKP RTC -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="BKP" Cvariant="RTC" Cversion="2.0.2" condition="BKP_RTC_K1986VE9xx">
+            <description>This example shows how to use BKP module functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\BKP\RTC\main.c"/>
+            </files>
+        </component>		
 		
         <!-- MDR32F1QI BKP SLEEP -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="BKP" Cvariant="SLEEP" Cversion="2.0.2" condition="BKP_SLEEP">
@@ -449,11 +627,27 @@
             </files>
         </component>
 		
+        <!-- MDR32F9Q2I BKP STOP -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="BKP" Cvariant="STOP" Cversion="2.0.1" condition="BKP_STOP_K1986VE9xx">
+            <description>This example shows how to use BKP module low-power functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\BKP\STOP\main.c"/>
+            </files>
+        </component>		
+		
         <!-- MDR32F1QI CAN LoopBack_Interrupt -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="CAN" Cvariant="LoopBack_Interrupt" Cversion="2.0.3" condition="CAN_LoopBack_Interrupt">
             <description>This example provides a description of how to set a communication with the CAN in loopback mode</description>
             <files>
                 <file category="source" name="Examples\MDR32F1QI\CAN\LoopBack_Interrupt\main.c"/>
+            </files>
+        </component>	
+
+        <!-- MDR32F9Q2I CAN LoopBack_Interrupt -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="CAN" Cvariant="LoopBack_Interrupt" Cversion="2.0.3" condition="CAN_LoopBack_Interrupt_K1986VE9xx">
+            <description>This example provides a description of how to set a communication with the CAN in loopback mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\CAN\LoopBack_Interrupt\main.c"/>
             </files>
         </component>		
 		
@@ -463,7 +657,15 @@
             <files>
                 <file category="source" name="Examples\MDR32F1QI\CAN\LoopBack_Polling\main.c"/>
             </files>
-        </component>				
+        </component>	
+
+        <!-- MDR32F9Q2I CAN LoopBack_Interrupt -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="CAN" Cvariant="LoopBack_Polling" Cversion="2.0.2" condition="CAN_LoopBack_Polling_K1986VE9xx">
+            <description>This example provides a description of how to set a communication with the CAN in loopback mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\CAN\LoopBack_Polling\main.c"/>
+            </files>
+        </component>		
 		
         <!-- MDR32F1QI CAN LoopBack_RTR -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="CAN" Cvariant="LoopBack_RTR" Cversion="2.0.3" condition="CAN_LoopBack_RTR">
@@ -471,7 +673,23 @@
             <files>
                 <file category="source" name="Examples\MDR32F1QI\CAN\LoopBack_RTR\main.c"/>
             </files>
+        </component>
+
+        <!-- MDR32F9Q2I CAN LoopBack_RTR -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="CAN" Cvariant="LoopBack_RTR" Cversion="2.0.2" condition="CAN_LoopBack_RTR_K1986VE9xx">
+            <description>This example provides a description of how to set a communication with the CAN in loopback mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\CAN\LoopBack_RTR\main.c"/>
+            </files>
         </component>		
+
+        <!-- MDR32F9Q2I COMP Internal_Scale -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="COMP" Cvariant="Internal_Scale" Cversion="2.0.0" condition="COMP_Internal_Scale_K1986VE9xx">
+            <description>This example shows how to use COMP module functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\COMP\Internal_Scale\main.c"/>
+            </files>
+        </component>
 
         <!-- MDR32F1QI DAC DMA_SineWave -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="DAC" Cvariant="DMA_SineWave" Cversion="2.0.1" condition="DAC_SineWave">
@@ -480,6 +698,14 @@
                 <file category="source" name="Examples\MDR32F1QI\DAC\DMA_SineWave\main.c"/>
             </files>
         </component>	
+		
+        <!-- MDR32F9Q2I DAC DMA_SineWave -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DAC" Cvariant="DMA_SineWave" Cversion="2.0.1" condition="DAC_SineWave_K1986VE9xx">
+            <description>This example describes how to use DAC with DMA to generate sine waves on DAC channel output</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\DAC\DMA_SineWave\main.c"/>
+            </files>
+        </component>		
 
 		<!-- MDR32F1QI DMA Pri_Alt_Channels -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="Pri_Alt_Channels" Cversion="2.0.0" condition="DMA_Pri_Alt_Channels">
@@ -489,11 +715,27 @@
             </files>
         </component>
 		
+		<!-- MDR32F9Q2I DMA Pri_Alt_Channels -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="Pri_Alt_Channels" Cversion="2.0.0" condition="DMA_Pri_Alt_Channels_K1986VE9xx">
+            <description>This example shows how to use DMA</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\DMA\Pri_Alt_Channels\main.c"/>
+            </files>
+        </component>		
+		
 		<!-- MDR32F1QI DMA SPI_RAM -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="SPI_RAM" Cversion="2.0.1" condition="DMA_SPI_RAM">
             <description>This example provides a description of how to use four DMA channels to transfer a data buffer from memory to SPI_SLAVE(SSP2) through SPI_MASTER(SSP1) and a second data buffer from memory to SPI_MASTER through SPI_SLAVE in full-duplex mode</description>
             <files>
                 <file category="source" name="Examples\MDR32F1QI\DMA\SPI_RAM\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F9Q2I DMA SPI_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="SPI_RAM" Cversion="2.0.1" condition="DMA_SPI_RAM_K1986VE9xx">
+            <description>This example provides a description of how to use four DMA channels to transfer a data buffer from memory to SPI_SLAVE(SSP2) through SPI_MASTER(SSP1) and a second data buffer from memory to SPI_MASTER through SPI_SLAVE in full-duplex mode</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\DMA\SPI_RAM\main.c"/>
             </files>
         </component>		
 		
@@ -504,6 +746,14 @@
                 <file category="source" name="Examples\MDR32F1QI\DMA\TIMER_RAM\main.c"/>
             </files>
         </component>	
+		
+		<!-- MDR32F9Q2I DMA TIMER_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="TIMER_RAM" Cversion="2.0.0" condition="DMA_TIMER_RAM_K1986VE9xx">
+            <description>This example provides a description of how to use DMA with TIM1 Capture request to transfer Data from TIM1 Capture Compare Register2 to memory</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\DMA\TIMER_RAM\main.c"/>
+            </files>
+        </component>			
 
 		<!-- MDR32F1QI DMA UART_RAM -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="UART_RAM" Cversion="2.0.1" condition="DMA_UART_RAM">
@@ -512,12 +762,28 @@
                 <file category="source" name="Examples\MDR32F1QI\DMA\UART_RAM\main.c"/>
             </files>
         </component>	
+		
+		<!-- MDR32F9Q2I DMA UART_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="DMA" Cvariant="UART_RAM" Cversion="2.0.1" condition="DMA_UART_RAM_K1986VE9xx">
+            <description>This example provides a basic communication between UART1 and UART2 using DMA capability</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\DMA\UART_RAM\main.c"/>
+            </files>
+        </component>		
 
 		<!-- MDR32F1QI EBC Extern_NAND -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="EBC" Cvariant="Extern_NAND" Cversion="2.0.2" condition="EBC_Extern_NAND">
             <description>This example shows how to use EXT_BUS module functions</description>
             <files>
                 <file category="source" name="Examples\MDR32F1QI\EBC\Extern_NAND\main.c"/>
+            </files>
+        </component>
+
+		<!-- MDR32F9Q2I EBC Extern_NAND -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EBC" Cvariant="Extern_NAND" Cversion="2.0.2" condition="EBC_Extern_NAND_K1986VE9xx">
+            <description>This example shows how to use EXT_BUS module functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\EBC\Extern_NAND\main.c"/>
             </files>
         </component>		
 		
@@ -526,6 +792,14 @@
             <description>This example shows how to use EXT_BUS module functions</description>
             <files>
                 <file category="source" name="Examples\MDR32F1QI\EBC\Extern_RAM\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F9Q2I EBC Extern_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EBC" Cvariant="Extern_RAM" Cversion="2.0.1" condition="EBC_Extern_RAM_K1986VE9xx">
+            <description>This example shows how to use EXT_BUS module functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\EBC\Extern_RAM\main.c"/>
             </files>
         </component>		
 		
