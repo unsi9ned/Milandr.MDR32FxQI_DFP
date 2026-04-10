@@ -372,6 +372,15 @@
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
 			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+        </condition>	
+
+        <condition id="EEPROM_Code_in_RAM_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
         </condition>		
 		
         <condition id="EEPROM_MassErase">
@@ -382,6 +391,15 @@
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
 			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
         </condition>	
+		
+        <condition id="EEPROM_MassErase_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+        </condition>			
 
         <condition id="EEPROM_Sector_Operations">
             <require condition="Cortex-M1 Series"/>
@@ -391,6 +409,15 @@
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
 			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
         </condition>	
+		
+        <condition id="EEPROM_Sector_Operations_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+        </condition>		
 
         <condition id="Ethernet_ICMP_TELNET">
             <require condition="Cortex-M1 Series"/>
@@ -809,6 +836,14 @@
             <files>
                 <file category="source" name="Examples\MDR32F1QI\EEPROM\Code_in_RAM\main.c"/>
             </files>
+        </component>		
+
+		<!-- MDR32F9Q2I EEPROM Code_in_RAM -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EEPROM" Cvariant="Code_in_RAM" Cversion="2.0.1" condition="EEPROM_Code_in_RAM_K1986VE9xx">
+            <description>This example shows how to use EEPROM</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\EEPROM\Code_in_RAM\main.c"/>
+            </files>
         </component>			
 		
 		<!-- MDR32F1QI EEPROM MassErase -->
@@ -818,6 +853,14 @@
                 <file category="source" name="Examples\MDR32F1QI\EEPROM\MassErase\main.c"/>
             </files>
         </component>	
+		
+		<!-- MDR32F9Q2I EEPROM MassErase -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EEPROM" Cvariant="MassErase" Cversion="2.0.1" condition="EEPROM_MassErase_K1986VE9xx">
+            <description>This example shows how to use EEPROM</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\EEPROM\MassErase\main.c"/>
+            </files>
+        </component>			
 
 		<!-- MDR32F1QI EEPROM Sector_Operations -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="EEPROM" Cvariant="Sector_Operations" Cversion="2.0.2" condition="EEPROM_Sector_Operations">
@@ -826,6 +869,14 @@
                 <file category="source" name="Examples\MDR32F1QI\EEPROM\Sector_Operations\main.c"/>
             </files>
         </component>
+		
+		<!-- MDR32F9Q2I EEPROM Sector_Operations -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="EEPROM" Cvariant="Sector_Operations" Cversion="2.0.1" condition="EEPROM_Sector_Operations_K1986VE9xx">
+            <description>This example shows how to use EEPROM</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\EEPROM\Sector_Operations\main.c"/>
+            </files>
+        </component>		
 
 		<!-- MDR32F1QI Ethernet Sector_Operations -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="Ethernet" Cvariant="ICMP_TELNET" Cversion="2.1.1" condition="Ethernet_ICMP_TELNET">
