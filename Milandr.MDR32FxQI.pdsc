@@ -825,7 +825,8 @@ Debug mode:
             <files>
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_eeprom.h"/>
                 <file category="source" name="Libraries\SPL\MDR32FxQI\src\MDR32FxQI_eeprom.c"/>
-                <file category="sourceAsm" name="Libraries\SPL\MDR32FxQI\src\MDR32FxQI_asm.S"/>
+                <file category="sourceAsm" name="Libraries\SPL\MDR32FxQI\src\MDR32FxQI_asm.S" condition="Compiler ARMCC"/>
+				<file category="sourceAsm" name="Libraries\SPL\MDR32FxQI\src\MDR32FxQI_asm.c" condition="GCC Compiler"/>
             </files>
         </component>
         
@@ -1000,7 +1001,8 @@ Debug mode:
             <files>
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_utils.h"/>
                 <file category="source" name="Libraries\SPL\MDR32FxQI\src\MDR32FxQI_utils.c"/>
-                <file category="sourceAsm" name="Libraries\SPL\MDR32FxQI\src\MDR32FxQI_asm.S"/>
+                <file category="sourceAsm" name="Libraries\SPL\MDR32FxQI\src\MDR32FxQI_asm.S" condition="Compiler ARMCC"/>
+				<file category="sourceAsm" name="Libraries\SPL\MDR32FxQI\src\MDR32FxQI_asm.c" condition="GCC Compiler"/>
             </files>
         </component>
 
