@@ -12,7 +12,7 @@ setlocal enabledelayedexpansion
 :: Настройки
 set PACK_NAME_DFP=Milandr.MDR32FxQI_DFP
 set PACK_NAME_EXAMPLES=Milandr.MDR32FxQI_Examples
-set DEFAULT_VERSION=1.3.2-unsi9ned.1
+set DEFAULT_VERSION=1.3.2-unsi9ned.2
 set SEVEN_ZIP_PATH=C:\Program Files\7-Zip
 
 :: Добавляем 7-Zip в PATH временно
