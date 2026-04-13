@@ -431,9 +431,45 @@
 			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>									
 			<deny Cclass="Drivers" Cgroup="Ethernet" Cversion="2.2.0i"/>									
         </condition>		
+
+        <condition id="I2C_Receive_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="I2C" Cversion="2.2.0i"/>									
+        </condition>	
+		
+        <condition id="I2C_Transmit_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="I2C" Cversion="2.2.0i"/>									
+        </condition>	
+
+        <condition id="I2C_Use_Interrupt_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="I2C" Cversion="2.2.0i"/>									
+        </condition>		
 		
         <condition id="IWDG_Independent">
             <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<deny Cclass="Drivers" Cgroup="IWDG" Cversion="2.0.3i"/>									
+        </condition>	
+
+        <condition id="IWDG_Independent_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
 			<!-- Все deny заменить на require после отладки -->
             <deny Cclass="Device" Cgroup="Startup"/>
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
@@ -472,7 +508,23 @@
             <deny Cclass="Device" Cgroup="Startup"/>
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-        </condition>	
+        </condition>
+
+        <condition id="PORT_Joystick_LEDs_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+        </condition>		
+		
+        <condition id="PORT_Blink_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+        </condition>		
 
         <condition id="RST_CLK_CPU_Clock">
             <require condition="Cortex-M1 Series"/>
@@ -483,6 +535,16 @@
 			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
 			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>					
         </condition>	
+		
+        <condition id="RST_CLK_CPU_Clock_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>					
+        </condition>		
 
         <condition id="SSP_SPI_FullDuplex">
             <require condition="Cortex-M1 Series"/>
@@ -494,6 +556,16 @@
 			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>				
         </condition>		
 		
+        <condition id="SSP_SPI_FullDuplex_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>				
+        </condition>			
+		
         <condition id="TIMER_5PWM_Output">
             <require condition="Cortex-M1 Series"/>
 			<!-- Все deny заменить на require после отладки -->
@@ -502,6 +574,15 @@
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
 			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
         </condition>	
+		
+        <condition id="TIMER_5PWM_Output_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
+        </condition>		
 
         <condition id="UART_ArraySend">
             <require condition="Cortex-M1 Series"/>
@@ -511,6 +592,15 @@
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
 			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
         </condition>	
+		
+        <condition id="UART_ArraySend_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+        </condition>		
 
         <condition id="UART_Interrupt">
             <require condition="Cortex-M1 Series"/>
@@ -520,6 +610,15 @@
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
 			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
         </condition>
+		
+        <condition id="UART_Interrupt_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+        </condition>		
 
         <condition id="UART_RetargetSTDIO">
             <require condition="Cortex-M1 Series"/>
@@ -531,9 +630,29 @@
 			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
 			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
         </condition>	
+		
+        <condition id="UART_RetargetSTDIO_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
+        </condition>		
 
         <condition id="UART_WordSend">
             <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+        </condition>	
+
+        <condition id="UART_WordSend_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
 			<!-- Все deny заменить на require после отладки -->
             <deny Cclass="Device" Cgroup="Startup"/>
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
@@ -551,6 +670,17 @@
 			<deny Cclass="Drivers" Cgroup="USB" Cversion="2.1.0i"/>		
 			<deny Cclass="Drivers" Cgroup="USB Library" Cversion="2.1.0i"/>		
         </condition>	
+		
+        <condition id="USB_VCOM_Echo_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<deny Cclass="Drivers" Cgroup="USB" Cversion="2.1.0i"/>		
+			<deny Cclass="Drivers" Cgroup="USB Library" Cversion="2.1.0i"/>		
+        </condition>		
 
         <condition id="WWDG_Use_GetStatus">
             <require condition="Cortex-M1 Series"/>
@@ -559,10 +689,28 @@
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
 			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
 			<deny Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
-        </condition>		
+        </condition>	
+
+        <condition id="WWDG_Use_GetStatus_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
+        </condition>			
 		
         <condition id="WWDG_Use_Interrupt">
             <require condition="Cortex-M1 Series"/>
+			<!-- Все deny заменить на require после отладки -->
+            <deny Cclass="Device" Cgroup="Startup"/>
+			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<deny Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
+        </condition>	
+
+        <condition id="WWDG_Use_Interrupt_K1986VE9xx">
+            <require condition="Cortex-M3 Series"/>
 			<!-- Все deny заменить на require после отладки -->
             <deny Cclass="Device" Cgroup="Startup"/>
 			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
@@ -890,6 +1038,30 @@
             </files>
         </component>	
 
+		<!-- MDR32F9Q2I I2C Receive -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="I2C" Cvariant="Receive" Cversion="2.0.2" condition="I2C_Receive_K1986VE9xx">
+            <description>This example shows how to use I2C</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\I2C\Recive\main.c"/>
+            </files>
+        </component>
+		
+		<!-- MDR32F9Q2I I2C Transmit -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="I2C" Cvariant="Transmit" Cversion="2.0.2" condition="I2C_Transmit_K1986VE9xx">
+            <description>This example shows how to use I2C</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\I2C\Transmit\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F9Q2I I2C Use_Interrupt -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="I2C" Cvariant="Use_Interrupt" Cversion="2.0.2" condition="I2C_Use_Interrupt_K1986VE9xx">
+            <description>This example shows how to use I2C</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\I2C\Use_Interrupt\main.c"/>
+            </files>
+        </component>			
+
 		<!-- MDR32F1QI IWDG Sector_Operations -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="IWDG" Cvariant="Independent" Cversion="2.0.1" condition="IWDG_Independent">
             <description>This example shows how to use IWDG module functions</description>
@@ -897,6 +1069,14 @@
                 <file category="source" name="Examples\MDR32F1QI\IWDG\Independent\main.c"/>
             </files>
         </component>	
+		
+		<!-- MDR32F9Q2I IWDG Sector_Operations -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="IWDG" Cvariant="Independent" Cversion="2.0.1" condition="IWDG_Independent_K1986VE9xx">
+            <description>This example shows how to use IWDG module functions</description>
+            <files>
+                <file category="source" name="Examples\MDR32F9Q2I\IWDG\Independent\main.c"/>
+            </files>
+        </component>			
 
 		<!-- MDR32F1QI MIL_STD_1553 Sector_Operations -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="MIL_STD_1553" Cvariant="Bus_Controller" Cversion="2.0.2" condition="MIL_STD_1553_Bus_Controller">
@@ -939,6 +1119,22 @@
             <files>
 				<file category="source" name="Examples\MDR32F1QI\PORT\Joystick_LEDs\main.c"/>
             </files>
+        </component>
+
+		<!-- MDR32F9Q2I PORT Joystick_LEDs -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="PORT" Cvariant="Joystick_LEDs" Cversion="2.0.0" condition="PORT_Joystick_LEDs_K1986VE9xx">
+            <description>This example shows how to use input/output ports</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\PORT\Joystick_LEDs\main.c"/>
+            </files>
+        </component>
+
+		<!-- MDR32F9Q2I PORT Blink -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="PORT" Cvariant="Blink" Cversion="2.0.0" condition="PORT_Blink_K1986VE9xx">
+            <description>This example shows how to use input/output ports</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\PORT\Blink\main.c"/>
+            </files>
         </component>		
 		
 		<!-- MDR32F1QI RST_CLK CPU_Clock -->
@@ -946,6 +1142,14 @@
             <description>This example shows how to use RST_CLK module functions to choose particular CPU_CLK frequency</description>
             <files>
 				<file category="source" name="Examples\MDR32F1QI\RST_CLK\CPU_Clock\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F9Q2I RST_CLK CPU_Clock -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="RST_CLK" Cvariant="CPU_Clock" Cversion="2.0.2" condition="RST_CLK_CPU_Clock_K1986VE9xx">
+            <description>This example shows how to use RST_CLK module functions to choose particular CPU_CLK frequency</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\RST_CLK\CPU_Clock\main.c"/>
             </files>
         </component>		
 
@@ -955,13 +1159,29 @@
             <files>
 				<file category="source" name="Examples\MDR32F1QI\SSP\SPI_FullDuplex\main.c"/>
             </files>
-        </component>		
+        </component>	
+
+		<!-- MDR32F9Q2I SSP FullDuplex -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="SSP" Cvariant="SPI_FullDuplex" Cversion="2.0.1" condition="SSP_SPI_FullDuplex_K1986VE9xx">
+            <description>This example provides a description of how to set a communication between SPI1 and SPI2 in full-duplex mode and performs a transfer from Master to Slave</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\SSP\SPI_FullDuplex\main.c"/>
+            </files>
+        </component>			
 		
 		<!-- MDR32F1QI TIMER 5PWM_Output -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="TIMER" Cvariant="5PWM_Output" Cversion="2.0.0" condition="TIMER_5PWM_Output">
             <description>This example shows how to configure the TIM4 peripheral to generate 5 PWM signals with 3 different duty cycles</description>
             <files>
 				<file category="source" name="Examples\MDR32F1QI\TIMER\5PWM_Output\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F9Q2I TIMER 5PWM_Output -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="TIMER" Cvariant="5PWM_Output" Cversion="2.0.0" condition="TIMER_5PWM_Output_K1986VE9xx">
+            <description>This example shows how to configure the TIM4 peripheral to generate 5 PWM signals with 3 different duty cycles</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\TIMER\5PWM_Output\main.c"/>
             </files>
         </component>		
 		
@@ -973,11 +1193,27 @@
             </files>
         </component>	
 		
+		<!-- MDR32F9Q2I UART ArraySend -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="ArraySend" Cversion="2.0.1" condition="UART_ArraySend_K1986VE9xx">
+            <description>This example shows how to use UART</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\UART\ArraySend\main.c"/>
+            </files>
+        </component>		
+		
 		<!-- MDR32F1QI UART Interrupt -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="Interrupt" Cversion="2.0.2" condition="UART_Interrupt">
             <description>This example shows how to use UART</description>
             <files>
 				<file category="source" name="Examples\MDR32F1QI\UART\Interrupt\main.c"/>
+            </files>
+        </component>
+
+		<!-- MDR32F9Q2I UART Interrupt -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="Interrupt" Cversion="2.0.2" condition="UART_Interrupt_K1986VE9xx">
+            <description>This example shows how to use UART</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\UART\Interrupt\main.c"/>
             </files>
         </component>		
 
@@ -987,13 +1223,29 @@
             <files>
 				<file category="source" name="Examples\MDR32F1QI\UART\RetargetSTDIO\main.c"/>
             </files>
-        </component>	
+        </component>
+
+		<!-- MDR32F9Q2I UART RetargetSTDIO -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="RetargetSTDIO" Cversion="2.0.2" condition="UART_RetargetSTDIO_K1986VE9xx">
+            <description>This example shows how to redirect standard I/O (STDIO) to UART using the MDR32FxQI_utils module</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\UART\RetargetSTDIO\main.c"/>
+            </files>
+        </component>		
 
 		<!-- MDR32F1QI UART WordSend -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="WordSend" Cversion="2.0.1" condition="UART_WordSend">
             <description>This example shows how to use UART</description>
             <files>
 				<file category="source" name="Examples\MDR32F1QI\UART\WordSend\main.c"/>
+            </files>
+        </component>	
+
+		<!-- MDR32F9Q2I UART WordSend -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="WordSend" Cversion="2.0.1" condition="UART_WordSend_K1986VE9xx">
+            <description>This example shows how to use UART</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\UART\WordSend\main.c"/>
             </files>
         </component>		
 		
@@ -1004,6 +1256,15 @@
 				<file category="source" name="Examples\MDR32F1QI\USB\VCOM_Echo\src\main.c"/>
 				<file category="header" name="Examples\MDR32F1QI\USB\VCOM_Echo\inc\MDR32FxQI_usb_handlers.h"/>
             </files>
+        </component>	
+
+		<!-- MDR32F9Q2I USB VCOM_Echo -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="USB" Cvariant="VCOM_Echo" Cversion="2.0.1" condition="USB_VCOM_Echo_K1986VE9xx">
+            <description>This example shows how to use USB CDC (Communication Device Class) device as Virtual COM port implementing "echo" mode</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\USB\VCOM_Echo\src\main.c"/>
+				<file category="header" name="Examples\MDR32F9Q2I\USB\VCOM_Echo\inc\MDR32FxQI_usb_handlers.h"/>
+            </files>
         </component>		
 		
 		<!-- MDR32F1QI WWDG Use_GetStatus -->
@@ -1012,7 +1273,15 @@
             <files>
 				<file category="source" name="Examples\MDR32F1QI\WWDG\Use_GetStatus\main.c"/>
             </files>
-        </component>	
+        </component>
+
+		<!-- MDR32F9Q2I WWDG Use_GetStatus -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="WWDG" Cvariant="Use_GetStatus" Cversion="2.0.1" condition="WWDG_Use_GetStatus_K1986VE9xx">
+            <description>This example shows how to use WWDG module functions</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\WWDG\Use_GetStatus\main.c"/>
+            </files>
+        </component>		
 
 		<!-- MDR32F1QI WWDG Use_Interrupt -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="WWDG" Cvariant="Use_Interrupt" Cversion="2.0.1" condition="WWDG_Use_Interrupt">
@@ -1020,7 +1289,15 @@
             <files>
 				<file category="source" name="Examples\MDR32F1QI\WWDG\Use_Interrupt\main.c"/>
             </files>
-        </component>			
+        </component>
+
+		<!-- MDR32F9Q2I WWDG Use_Interrupt -->
+        <component Cvendor="Milandr" Cclass="Examples" Cgroup="WWDG" Cvariant="Use_Interrupt" Cversion="2.0.2" condition="WWDG_Use_Interrupt_K1986VE9xx">
+            <description>This example shows how to use WWDG module functions</description>
+            <files>
+				<file category="source" name="Examples\MDR32F9Q2I\WWDG\Use_Interrupt\main.c"/>
+            </files>
+        </component>		
 		
 	</components>
 </package>	
