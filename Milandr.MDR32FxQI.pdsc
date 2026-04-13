@@ -703,7 +703,7 @@ Debug mode:
             <files>
                 <!-- startup files -->
                 <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE1xI\startup\arm\startup_K1986VE1xI.S" attr="config" condition="Compiler ARMCC"/>
-                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE1xI\startup\gcc\startup_K1986VE1xI.S" attr="config" condition="GCC Compiler"/>				
+                <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE1xI\startup\gcc\startup_K1986VE1xI.c" attr="config" condition="GCC Compiler"/>				
                 <!-- system file -->
                 <file category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE1xI\startup\system_K1986VE1xI.c" attr="config"/>
                 <!-- header file -->
