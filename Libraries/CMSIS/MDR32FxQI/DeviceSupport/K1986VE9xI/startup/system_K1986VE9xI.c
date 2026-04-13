@@ -33,7 +33,7 @@
     #define __VECTOR_TABLE_ADDRESS &__Vectors
 #elif defined (__GNUC__) /* GNU Compiler (GCC) */
     extern uint32_t __Vectors;
-    #define __VECTOR_TABLE_ADDRESS &__Vectors	
+    #define __VECTOR_TABLE_ADDRESS &__Vectors
 #endif
 
 #if defined(FACTORY_DATA_SYSTEM_INIT) && (FACTORY_DATA_SYSTEM_INIT == 1)
@@ -214,12 +214,24 @@ void SystemInit(void)
 #if defined(FACTORY_DATA_SYSTEM_INIT) && (FACTORY_DATA_SYSTEM_INIT == 1)
     MDR_RST_CLK->PER_CLOCK = RST_CLK_PER_CLOCK_PCLK_EN_EEPROM | RST_CLK_PER_CLOCK_PCLK_EN_RST_CLK | RST_CLK_PER_CLOCK_PCLK_EN_BKP;
 
+#if defined (__GNUC__) /* GNU Compiler (GCC) */
+    volatile static uint32_t readEepromFunc[EEPROM_FACTORY_READ_WORD_FUNC_SIZE];
+
+    for (i = 0; i < EEPROM_FACTORY_READ_WORD_FUNC_SIZE; i++)
+    {
+    	readEepromFunc[i] = EEPROM_FACTORY_READ_WORD_FUNC[i];
+    }
+
+    uintptr_t addr = (uintptr_t)(readEepromFunc) | 1;
+#else
     volatile uint32_t *targetAddr = (volatile uint32_t *)EEPROM_FACTORY_READ_WORD_FUNC_ADDR;
     for (i = 0; i < EEPROM_FACTORY_READ_WORD_FUNC_SIZE; i++) {
         *(targetAddr + i) = EEPROM_FACTORY_READ_WORD_FUNC[i];
     }
 
     uintptr_t addr = EEPROM_FACTORY_READ_WORD_FUNC_ADDR + 1;
+#endif
+
     uint32_t (*func_ptr)(uint32_t) = (uint32_t (*)(uint32_t))addr;
 
     MDR_EEPROM->KEY = 0x8AAA5551;
