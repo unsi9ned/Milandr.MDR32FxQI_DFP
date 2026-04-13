@@ -722,6 +722,10 @@
 	
 	<components>
 	
+        <condition id="GCC Compiler">
+            <require Tcompiler="GCC"/>
+        </condition>	
+	
         <!-- MDR32F1QI ADC1_IT -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="ADC" Cversion="2.0.2" Cvariant="IT" condition="ADC1_IT">
             <description>This example describes how to use the ADC1 to transfer continuously converted data from ADC1 to memory</description>
@@ -1220,16 +1224,24 @@
 		<!-- MDR32F1QI UART RetargetSTDIO -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="RetargetSTDIO" Cversion="2.0.2" condition="UART_RetargetSTDIO">
             <description>This example shows how to redirect standard I/O (STDIO) to UART using the MDR32FxQI_utils module</description>
+			<RTE_Components_h>
+#define _USE_DEBUG_UART_
+            </RTE_Components_h>
             <files>
 				<file category="source" name="Examples\MDR32F1QI\UART\RetargetSTDIO\main.c"/>
+				<file category="source" name="Examples\MDR32F1QI\UART\RetargetSTDIO\syscalls.c" condition="GCC Compiler"/>
             </files>
         </component>
 
 		<!-- MDR32F9Q2I UART RetargetSTDIO -->
         <component Cvendor="Milandr" Cclass="Examples" Cgroup="UART" Cvariant="RetargetSTDIO" Cversion="2.0.2" condition="UART_RetargetSTDIO_K1986VE9xx">
             <description>This example shows how to redirect standard I/O (STDIO) to UART using the MDR32FxQI_utils module</description>
+			<RTE_Components_h>
+#define _USE_DEBUG_UART_
+            </RTE_Components_h>
             <files>
 				<file category="source" name="Examples\MDR32F9Q2I\UART\RetargetSTDIO\main.c"/>
+				<file category="source" name="Examples\MDR32F1QI\UART\RetargetSTDIO\syscalls.c" condition="GCC Compiler"/>
             </files>
         </component>		
 
