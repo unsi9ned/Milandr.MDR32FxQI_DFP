@@ -65,657 +65,657 @@
 
         <condition id="ADC1_IT">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
         </condition>
 		
         <condition id="ADC1_DMA_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
         </condition>		
 		
 		<condition id="ADC_DMA_ping_pong">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
         </condition>
 		
 		<condition id="ADC_DMA_ping_pong_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
         </condition>		
 		
         <condition id="AnalogWatchdog">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
         </condition>	
 		
         <condition id="AnalogWatchdog_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
         </condition>		
 
         <condition id="ARINC">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
-			<deny Cclass="Drivers" Cgroup="ARINC429R" Cversion="2.1.0i"/>
-			<deny Cclass="Drivers" Cgroup="ARINC429T" Cversion="2.1.0i"/>
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="ADC" Cversion="2.2.0i"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+			<require Cclass="Drivers" Cgroup="ARINC429R" Cversion="2.1.0i"/>
+			<require Cclass="Drivers" Cgroup="ARINC429T" Cversion="2.1.0i"/>
         </condition>		
 		
         <condition id="BKP_RTC">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
         </condition>	
 
         <condition id="BKP_RTC_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
         </condition>			
 		
         <condition id="BKP_SLEEP">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
         </condition>	
 		
         <condition id="BKP_STOP_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>
         </condition>		
 
         <condition id="CAN_LoopBack_Interrupt">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
         </condition>	
 		
         <condition id="CAN_LoopBack_Interrupt_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
         </condition>			
 
         <condition id="CAN_LoopBack_Polling">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
         </condition>		
 		
         <condition id="CAN_LoopBack_Polling_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
         </condition>			
 		
         <condition id="CAN_LoopBack_RTR">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
         </condition>	
 		
         <condition id="CAN_LoopBack_RTR_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="CAN" Cversion="2.2.0i"/>						
         </condition>	
 
         <condition id="COMP_Internal_Scale_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="COMP" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="COMP" Cversion="2.2.0i"/>						
         </condition>		
 
         <condition id="DAC_SineWave">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="DAC" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="DAC" Cversion="2.2.0i"/>						
         </condition>
 		
         <condition id="DAC_SineWave_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-            <deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="DAC" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+            <require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="DAC" Cversion="2.2.0i"/>						
         </condition>		
 		
         <condition id="DMA_Pri_Alt_Channels">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
         </condition>	
 		
         <condition id="DMA_Pri_Alt_Channels_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>						
         </condition>		
 
         <condition id="DMA_SPI_RAM">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>			
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>			
         </condition>		
 		
         <condition id="DMA_SPI_RAM_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>			
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>			
         </condition>		
 		
         <condition id="DMA_TIMER_RAM">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
         </condition>	
 
         <condition id="DMA_TIMER_RAM_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
         </condition>		
 		
         <condition id="DMA_UART_RAM">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
         </condition>	
 		
         <condition id="DMA_UART_RAM_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
         </condition>		
 
         <condition id="EBC_Extern_NAND">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
         </condition>	
 		
         <condition id="EBC_Extern_NAND_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
         </condition>			
 
         <condition id="EBC_Extern_RAM">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
         </condition>
 
         <condition id="EBC_Extern_RAM_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="EBC" Cversion="2.2.0i"/>						
         </condition>		
 		
         <condition id="EEPROM_Code_in_RAM">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
         </condition>	
 
         <condition id="EEPROM_Code_in_RAM_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
         </condition>		
 		
         <condition id="EEPROM_MassErase">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
         </condition>	
 		
         <condition id="EEPROM_MassErase_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
         </condition>			
 
         <condition id="EEPROM_Sector_Operations">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
         </condition>	
 		
         <condition id="EEPROM_Sector_Operations_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>						
         </condition>		
 
         <condition id="Ethernet_ICMP_TELNET">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>									
-			<deny Cclass="Drivers" Cgroup="Ethernet" Cversion="2.2.0i"/>									
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>									
+			<require Cclass="Drivers" Cgroup="Ethernet" Cversion="2.2.0i"/>									
         </condition>		
 
         <condition id="I2C_Receive_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="I2C" Cversion="2.2.0i"/>									
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="I2C" Cversion="2.2.0i"/>									
         </condition>	
 		
         <condition id="I2C_Transmit_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="I2C" Cversion="2.2.0i"/>									
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="I2C" Cversion="2.2.0i"/>									
         </condition>	
 
         <condition id="I2C_Use_Interrupt_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="I2C" Cversion="2.2.0i"/>									
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="I2C" Cversion="2.2.0i"/>									
         </condition>		
 		
         <condition id="IWDG_Independent">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="IWDG" Cversion="2.0.3i"/>									
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="IWDG" Cversion="2.0.3i"/>									
         </condition>	
 
         <condition id="IWDG_Independent_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="IWDG" Cversion="2.0.3i"/>									
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="IWDG" Cversion="2.0.3i"/>									
         </condition>		
 		
         <condition id="MIL_STD_1553_Bus_Controller">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="MIL_STD_1553" Cversion="2.1.0i"/>						
-			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>		
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="MIL_STD_1553" Cversion="2.1.0i"/>						
+			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>		
         </condition>		
 		
         <condition id="MIL_STD_1553_Terminal_Device">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
-			<deny Cclass="Drivers" Cgroup="MIL_STD_1553" Cversion="2.1.0i"/>						
-			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			<require Cclass="Drivers" Cgroup="MIL_STD_1553" Cversion="2.1.0i"/>						
+			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
         </condition>			
 		
         <condition id="PORT_Joystick_LEDs">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
         </condition>
 
         <condition id="PORT_Joystick_LEDs_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
         </condition>		
 		
         <condition id="PORT_Blink_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>						
         </condition>		
 
         <condition id="RST_CLK_CPU_Clock">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>					
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>					
         </condition>	
 		
         <condition id="RST_CLK_CPU_Clock_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>					
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>					
         </condition>		
 
         <condition id="SSP_SPI_FullDuplex">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
-			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>				
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<require Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>				
         </condition>		
 		
         <condition id="SSP_SPI_FullDuplex_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
-			<deny Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>				
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="DMA" Cversion="2.2.0i"/>				
+			<require Cclass="Drivers" Cgroup="SSP" Cversion="2.2.0i"/>				
         </condition>			
 		
         <condition id="TIMER_5PWM_Output">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
         </condition>	
 		
         <condition id="TIMER_5PWM_Output_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="TIMER" Cversion="2.2.0i"/>												
         </condition>		
 
         <condition id="UART_ArraySend">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
         </condition>	
 		
         <condition id="UART_ArraySend_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
         </condition>		
 
         <condition id="UART_Interrupt">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
         </condition>
 		
         <condition id="UART_Interrupt_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
         </condition>		
 
         <condition id="UART_RetargetSTDIO">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
         </condition>	
 		
         <condition id="UART_RetargetSTDIO_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
         </condition>		
 
         <condition id="UART_WordSend">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
         </condition>	
 
         <condition id="UART_WordSend_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="UART" Cversion="2.2.0i"/>												
         </condition>		
 		
         <condition id="USB_VCOM_Echo">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="USB" Cversion="2.1.0i"/>		
-			<deny Cclass="Drivers" Cgroup="USB Library" Cversion="2.1.0i"/>		
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="USB" Cversion="2.1.0i"/>		
+			<require Cclass="Drivers" Cgroup="USB Library" Cversion="2.1.0i"/>		
         </condition>	
 		
         <condition id="USB_VCOM_Echo_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
-			<deny Cclass="Drivers" Cgroup="USB" Cversion="2.1.0i"/>		
-			<deny Cclass="Drivers" Cgroup="USB Library" Cversion="2.1.0i"/>		
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
+			<require Cclass="Drivers" Cgroup="USB" Cversion="2.1.0i"/>		
+			<require Cclass="Drivers" Cgroup="USB Library" Cversion="2.1.0i"/>		
         </condition>		
 
         <condition id="WWDG_Use_GetStatus">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
         </condition>	
 
         <condition id="WWDG_Use_GetStatus_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
         </condition>			
 		
         <condition id="WWDG_Use_Interrupt">
             <require condition="Cortex-M1 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
         </condition>	
 
         <condition id="WWDG_Use_Interrupt_K1986VE9xx">
             <require condition="Cortex-M3 Series"/>
-			<!-- Все deny заменить на require после отладки -->
-            <deny Cclass="Device" Cgroup="Startup"/>
-			<deny Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
-			<deny Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
-			<deny Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
+			
+            <require Cclass="Device" Cgroup="Startup"/>
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="RST_CLK" Cversion="2.2.0i"/>			
+			<require Cclass="Drivers" Cgroup="WWDG" Cversion="2.0.3i"/>		
         </condition>		
 
 	</conditions>
