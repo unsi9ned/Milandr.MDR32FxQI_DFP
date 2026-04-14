@@ -18,7 +18,13 @@ static void Dummy_Handler(char c)
 	return;
 }
 
+static char Dummy_Handler_Rx()
+{
+	return 0;
+}
+
 void UART_PutChar(char c) __attribute__((weak, alias("Dummy_Handler")));
+char UART_GetChar() __attribute__((weak, alias("Dummy_Handler_Rx")));
 
 /*This function is used for handle heap option*/
 __attribute__ ((used))
@@ -73,20 +79,21 @@ __attribute__ ((weak))
 int _read(int file, char *ptr, int len)
 {
 
-#if 0
+#if 1
      //user code example
      int i;
      (void)file;
 
      for(i = 0; i < len; i++)
      {
-        // UART_GetChar is user's basic input function
-        *ptr++ = UART_GetChar();
+    	 // UART_GetChar is user's basic input function
+    	 *ptr++ = UART_GetChar();
      }
 
+     return len;
 #endif
 
-    return len;
+     return 0;
 }
 
 
