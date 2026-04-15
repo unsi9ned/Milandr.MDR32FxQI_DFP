@@ -629,6 +629,7 @@
 			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
 			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
 			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
         </condition>	
 		
         <condition id="UART_RetargetSTDIO_K1986VE9xx">
@@ -640,6 +641,7 @@
 			<require Cclass="Drivers" Cgroup="EEPROM" Cversion="2.2.0i"/>		
 			<require Cclass="Drivers" Cgroup="BKP" Cversion="2.2.0i"/>		
 			<require Cclass="Drivers" Cgroup="UTILS" Cversion="1.2.0i"/>	
+			<require Cclass="Drivers" Cgroup="PORT" Cversion="2.2.0i"/>	
         </condition>		
 
         <condition id="UART_WordSend">
