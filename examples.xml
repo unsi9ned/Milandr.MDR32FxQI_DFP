@@ -1241,7 +1241,7 @@
             </RTE_Components_h>
             <files>
 				<file category="source" name="Examples\MDR32F9Q2I\UART\RetargetSTDIO\main.c"/>
-				<file category="source" name="Examples\MDR32F1QI\UART\RetargetSTDIO\syscalls.c" condition="GCC Compiler"/>
+				<file category="source" name="Examples\MDR32F9Q2I\UART\RetargetSTDIO\syscalls.c" condition="GCC Compiler"/>
             </files>
         </component>		
 
