@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Pack version (e.g., 1.3.2-unsi9ned.1)'
+        description: 'Pack version (e.g., 1.3.2-unsi9ned.2)'
         required: false
         default: '1.3.2-unsi9ned.2'
         type: string
@@ -27,7 +27,8 @@ jobs:
         id: vars
         shell: pwsh
         run: |
-          $PACK_NAME = "Milandr.MDR32FxQI_DFP"
+          $PACK_NAME_DFP = "Milandr.MDR32FxQI_DFP"
+          $PACK_NAME_EXAMPLES = "Milandr.MDR32FxQI_Examples"
           
           if ("${{ github.event.inputs.version }}" -ne "") {
             $VERSION = "${{ github.event.inputs.version }}"
@@ -37,9 +38,11 @@ jobs:
             $VERSION = "1.3.2-unsi9ned.2"
           }
           
-          echo "PACK_NAME=$PACK_NAME" >> $env:GITHUB_ENV
+          echo "PACK_NAME_DFP=$PACK_NAME_DFP" >> $env:GITHUB_ENV
+          echo "PACK_NAME_EXAMPLES=$PACK_NAME_EXAMPLES" >> $env:GITHUB_ENV
           echo "PACK_VERSION=$VERSION" >> $env:GITHUB_ENV
-          echo "OUTPUT_FILE=$PACK_NAME.$VERSION.pack" >> $env:GITHUB_ENV
+          echo "OUTPUT_FILE_DFP=$PACK_NAME_DFP.$VERSION.pack" >> $env:GITHUB_ENV
+          echo "OUTPUT_FILE_EXAMPLES=$PACK_NAME_EXAMPLES.$VERSION.pack" >> $env:GITHUB_ENV
       
       - name: Display build info
         shell: pwsh
@@ -48,92 +51,163 @@ jobs:
           Write-Host "  CMSIS Pack Builder"
           Write-Host "========================================"
           Write-Host ""
-          Write-Host "Pack: ${{ env.PACK_NAME }}"
+          Write-Host "DFP Pack: ${{ env.PACK_NAME_DFP }}"
+          Write-Host "Examples Pack: ${{ env.PACK_NAME_EXAMPLES }}"
           Write-Host "Version: ${{ env.PACK_VERSION }}"
-          Write-Host "Output: ${{ env.OUTPUT_FILE }}"
           Write-Host ""
       
-      - name: Verify PDSC file exists
+      - name: Verify PDSC files exist
         shell: pwsh
         run: |
-          $pdsc = "${{ env.PACK_NAME }}.pdsc"
-          if (Test-Path $pdsc) {
-            Write-Host "[OK] PDSC file found: $pdsc"
+          $pdsc_dfp = "${{ env.PACK_NAME_DFP }}.pdsc"
+          $pdsc_examples = "examples.xml"
+          
+          if (Test-Path $pdsc_dfp) {
+            Write-Host "[OK] DFP PDSC file found: $pdsc_dfp"
           } else {
-            Write-Host "[WARNING] PDSC file not found: $pdsc"
+            Write-Host "[WARNING] DFP PDSC file not found: $pdsc_dfp"
+          }
+          
+          if (Test-Path $pdsc_examples) {
+            Write-Host "[OK] Examples PDSC file found: $pdsc_examples"
+          } else {
+            Write-Host "[WARNING] Examples PDSC file not found: $pdsc_examples"
           }
       
-      - name: Create temporary directory
+      # ========================================
+      # Build DFP Pack
+      # ========================================
+      - name: Create temporary directory for DFP
         shell: pwsh
         run: |
-          $tempDir = Join-Path $env:TEMP "pack_$([System.IO.Path]::GetRandomFileName())"
+          $tempDir = Join-Path $env:TEMP "pack_dfp_$([System.IO.Path]::GetRandomFileName())"
           New-Item -ItemType Directory -Path $tempDir -Force | Out-Null
-          echo "TEMP_DIR=$tempDir" >> $env:GITHUB_ENV
+          echo "TEMP_DIR_DFP=$tempDir" >> $env:GITHUB_ENV
       
-      - name: Copy files to temporary directory
+      - name: Copy DFP files to temporary directory
         shell: pwsh
         run: |
-          $exclude = @('*.bat', '*.pack', '.git*', '.github')
+          $exclude = @('*.bat', '*.pack', '.git*', '.github', 'examples.xml', 'Examples')
           
           # Копируем файлы
           Get-ChildItem -File | Where-Object { 
-            $exclude | Where-Object { $_ -like $_.Name } | Out-Null
             $_.Name -notin $exclude
           } | ForEach-Object {
-            Copy-Item $_.FullName -Destination "${{ env.TEMP_DIR }}\" -Force
+            Copy-Item $_.FullName -Destination "${{ env.TEMP_DIR_DFP }}\" -Force
             Write-Host "  Copied file: $($_.Name)"
           }
           
-          # Копируем папки
+          # Копируем папки (исключая Examples)
           Get-ChildItem -Directory | Where-Object {
-            $_.Name -ne '.git' -and $_.Name -ne '.github'
+            $_.Name -ne '.git' -and $_.Name -ne '.github' -and $_.Name -ne 'Examples'
           } | ForEach-Object {
-            $destDir = Join-Path "${{ env.TEMP_DIR }}" $_.Name
+            $destDir = Join-Path "${{ env.TEMP_DIR_DFP }}" $_.Name
             New-Item -ItemType Directory -Path $destDir -Force | Out-Null
             Copy-Item -Path "$($_.FullName)\*" -Destination $destDir -Recurse -Force
             Write-Host "  Copied directory: $($_.Name)"
           }
-          
-          # Дополнительно удаляем create_pack.bat если он всё же появился
-          Remove-Item -Path "${{ env.TEMP_DIR }}\create_pack.bat" -Force -ErrorAction SilentlyContinue
       
-      - name: Install 7-Zip
-        uses: crazy-max/ghaction-chocolatey@v3
-        with:
-          args: install 7zip
-      
-      - name: Create pack archive
+      - name: Create DFP pack archive
         shell: pwsh
         run: |
-          $outputFile = "${{ github.workspace }}\${{ env.OUTPUT_FILE }}"
-          Push-Location "${{ env.TEMP_DIR }}"
+          $outputFile = "${{ github.workspace }}\${{ env.OUTPUT_FILE_DFP }}"
+          Push-Location "${{ env.TEMP_DIR_DFP }}"
           7z a -tzip $outputFile * -mx=5 | Out-Null
           Pop-Location
-          Write-Host "[OK] Pack created: $outputFile"
+          Write-Host "[OK] DFP Pack created: $outputFile"
       
-      - name: Clean up temporary directory
+      - name: Clean up DFP temporary directory
         shell: pwsh
         run: |
-          Remove-Item -Path "${{ env.TEMP_DIR }}" -Recurse -Force
+          Remove-Item -Path "${{ env.TEMP_DIR_DFP }}" -Recurse -Force
       
-      - name: Upload artifact
+      # ========================================
+      # Build Examples Pack
+      # ========================================
+      - name: Create temporary directory for Examples
+        shell: pwsh
+        run: |
+          $tempDir = Join-Path $env:TEMP "pack_examples_$([System.IO.Path]::GetRandomFileName())"
+          New-Item -ItemType Directory -Path $tempDir -Force | Out-Null
+          echo "TEMP_DIR_EXAMPLES=$tempDir" >> $env:GITHUB_ENV
+      
+      - name: Copy Examples files to temporary directory
+        shell: pwsh
+        run: |
+            # Копируем examples.xml и переименовываем в .pdsc
+            Copy-Item "examples.xml" "${{ env.TEMP_DIR_EXAMPLES }}\${{ env.PACK_NAME_EXAMPLES }}.pdsc" -Force
+            
+            # Копируем документацию
+            Copy-Item "LICENSE.txt" "${{ env.TEMP_DIR_EXAMPLES }}\" -Force -ErrorAction SilentlyContinue
+            Copy-Item "README.md" "${{ env.TEMP_DIR_EXAMPLES }}\" -Force -ErrorAction SilentlyContinue
+            Copy-Item "RELEASE.md" "${{ env.TEMP_DIR_EXAMPLES }}\" -Force -ErrorAction SilentlyContinue
+            
+            # Удаляем существующую папку Examples перед копированием
+            $examplesDest = "${{ env.TEMP_DIR_EXAMPLES }}\Examples"
+            if (Test-Path $examplesDest) {
+              Remove-Item -Path $examplesDest -Recurse -Force
+            }
+            
+            # Копируем папку Examples
+            if (Test-Path "Examples") {
+              Copy-Item -Path "Examples" -Destination "${{ env.TEMP_DIR_EXAMPLES }}\" -Recurse -Force
+              Write-Host "  Copied directory: Examples"
+            }
+            
+            # Удаляем .gitignore
+            Remove-Item -Path "${{ env.TEMP_DIR_EXAMPLES }}\.gitignore" -Force -ErrorAction SilentlyContinue
+            Get-ChildItem -Path "${{ env.TEMP_DIR_EXAMPLES }}\Examples" -Recurse -Filter ".gitignore" | ForEach-Object {
+              Remove-Item $_.FullName -Force -ErrorAction SilentlyContinue
+            }
+      
+      - name: Create Examples pack archive
+        shell: pwsh
+        run: |
+          $outputFile = "${{ github.workspace }}\${{ env.OUTPUT_FILE_EXAMPLES }}"
+          Push-Location "${{ env.TEMP_DIR_EXAMPLES }}"
+          7z a -tzip $outputFile * -mx=5 | Out-Null
+          Pop-Location
+          Write-Host "[OK] Examples Pack created: $outputFile"
+      
+      - name: Clean up Examples temporary directory
+        shell: pwsh
+        run: |
+          Remove-Item -Path "${{ env.TEMP_DIR_EXAMPLES }}" -Recurse -Force
+      
+      # ========================================
+      # Upload artifacts and create release
+      # ========================================
+      - name: Upload DFP artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.OUTPUT_FILE }}
-          path: ${{ env.OUTPUT_FILE }}
+          name: ${{ env.OUTPUT_FILE_DFP }}
+          path: ${{ env.OUTPUT_FILE_DFP }}
+          compression-level: 0
           retention-days: 30
       
-      - name: Get file size
+      - name: Upload Examples artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.OUTPUT_FILE_EXAMPLES }}
+          path: ${{ env.OUTPUT_FILE_EXAMPLES }}
+          compression-level: 0
+          retention-days: 30
+      
+      - name: Get file sizes
         shell: pwsh
         run: |
-          $file = Get-Item "${{ env.OUTPUT_FILE }}"
-          Write-Host "Size: $([math]::Round($file.Length / 1KB, 2)) KB"
+          $file_dfp = Get-Item "${{ env.OUTPUT_FILE_DFP }}"
+          $file_examples = Get-Item "${{ env.OUTPUT_FILE_EXAMPLES }}"
+          Write-Host "DFP Pack size: $([math]::Round($file_dfp.Length / 1KB, 2)) KB"
+          Write-Host "Examples Pack size: $([math]::Round($file_examples.Length / 1KB, 2)) KB"
       
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: ${{ env.OUTPUT_FILE }}
-          name: "${{ env.PACK_NAME }} ${{ env.PACK_VERSION }}"
+          files: |
+            ${{ env.OUTPUT_FILE_DFP }}
+            ${{ env.OUTPUT_FILE_EXAMPLES }}
+          name: "Milandr.MDR32FxQI_DFP ${{ env.PACK_VERSION }}"
           tag_name: ${{ github.ref_name }}
           generate_release_notes: true
