@@ -47,6 +47,20 @@ void ClockConfigure(void);
 /* Private functions ---------------------------------------------------------*/  
 
 #if defined (_USE_DEBUG_UART_)
+#if defined (__GNUC__) /* GNU Compiler (GCC) */
+void UART_PutChar(char c)
+{
+	while(UART_GetFlagStatus(DEBUG_UART, UART_FLAG_TXFE) == RESET);
+	UART_SendData(DEBUG_UART, c);
+}
+
+char UART_GetChar()
+{
+	while(UART_GetFlagStatus(DEBUG_UART, UART_FLAG_RXFE) == SET);
+	return UART_ReceiveData(DEBUG_UART);
+}
+#endif
+
 /**
   * @brief  Main program
   * @param  None
@@ -72,8 +86,13 @@ int main(void)
     /* Print of received symbols to UART */
     while(1)
     {
+#if defined (__GNUC__) /* GNU Compiler (GCC) */
+    	symbol = UART_GetChar();
+    	UART_PutChar(symbol);
+#else
         symbol = getchar();
         putchar(symbol);
+#endif
     }
 }
 #else

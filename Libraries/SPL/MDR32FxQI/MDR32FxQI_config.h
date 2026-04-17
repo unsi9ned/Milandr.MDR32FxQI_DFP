@@ -344,6 +344,9 @@ extern "C" {
     #define IAR_SECTION(section)
     #define __RAMFUNC __attribute__((section("EXECUTABLE_MEMORY_SECTION")))
 #endif
+#if defined (__GNUC__) /* GNU Compiler (GCC) */
+	#define __RAMFUNC __attribute__((section(".data")))
+#endif
 
 
 // <h> Parameter run-time check support
