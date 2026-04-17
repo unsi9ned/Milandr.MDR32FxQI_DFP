@@ -963,6 +963,7 @@ Debug mode:
                 <file category="doc"    name="Libraries\SPL\MDR32FxQI\inc\USB_Library\MDR32FxQI_USB_Library.pdf"/>
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\USB_Library\MDR32FxQI_usb_CDC.h"/>
                 <file category="header" name="Libraries\SPL\MDR32FxQI\inc\USB_Library\MDR32FxQI_usb_device.h"/>
+                <file category="header" name="Libraries\SPL\MDR32FxQI\inc\USB_Library\MDR32FxQI_usb_default_handlers.h"/>
                 <file category="source" name="Libraries\SPL\MDR32FxQI\src\USB_Library\MDR32FxQI_usb_CDC.c"/>
                 <file category="source" name="Libraries\SPL\MDR32FxQI\src\USB_Library\MDR32FxQI_usb_device.c"/>
             </files>
