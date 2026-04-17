@@ -11,6 +11,7 @@
   */
 
 #include <stdint.h>
+#include "MDR32FxQI_config.h"
 
 /**
   * @brief   Updates data cache.
@@ -19,6 +20,7 @@
   * @param   None
   * @retval  None
   */
+__RAMFUNC
 __attribute__ ((naked))
 void EEPROM_UpdateDCacheAsm(void)
 {
@@ -39,6 +41,7 @@ void EEPROM_UpdateDCacheAsm(void)
   * @param   loops: specifies the delay time in loops.
   * @retval  None
   */
+__RAMFUNC
 __attribute__ ((naked))
 void DELAY_PROGRAM_WaitLoopsAsm(uint32_t loops)
 {
